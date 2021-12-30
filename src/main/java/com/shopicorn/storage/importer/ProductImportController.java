@@ -18,24 +18,24 @@ public class ProductImportController {
 	ProductRepository repo;
 
 	/**
-	 * Import the CSV file at ./file/import.scv and return the count of imported
-	 * entities.
+	 * Import the CSV file at ./file/products.csv
 	 * 
-	 * @return {@link ResponseEntity} holding the count of imported entities
+	 * @return {@link ResponseEntity} holding the imported {@link ProductEntity}
+	 *         list.
 	 * @throws IOException Thrown when import fails
 	 */
 	@GetMapping
-	ResponseEntity<Integer> importDB() throws IOException {
+	Collection<ProductEntity> importDB() throws IOException {
 		// Reset Table
 		repo.deleteAllInBatch();
 
 		// Import CSV File
-		var file = new File("file/import.csv");
+		var file = new File("file/products.csv");
 		var reader = new ProductCsvReader(file);
 		Collection<ProductEntity> entities = reader.readCsv();
 		var saved = repo.saveAll(entities);
 
-		// Return saved entity count
-		return ResponseEntity.ok(saved.size());
+		// Return the imported products
+		return saved;
 	}
 }
