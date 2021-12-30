@@ -27,8 +27,8 @@ public class ProductImportController {
 	@GetMapping
 	ResponseEntity<Integer> importDB() throws IOException {
 		// Reset Table
-		repo.deleteAll();
-		
+		repo.deleteAllInBatch();
+
 		// Import CSV File
 		var file = new File("file/import.csv");
 		var reader = new ProductCsvReader(file);
