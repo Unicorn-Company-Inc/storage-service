@@ -30,12 +30,13 @@ class ProductCsvReader {
 
 	private ProductEntity toProductEntity(CSVRecord record) {
 		long id = Long.parseLong(record.get("id"));
+		String name = record.get("name");
 		String color = record.get("color");
 		String category = record.get("category");
 		String description = record.get("description");
 		String manufacturer = record.get("manufacturer");
 		LocalDate releaseDate = LocalDate.parse(record.get("releaseDate"));
 		int stars = Integer.parseInt(record.get("stars"));
-		return new ProductEntity(id, color, category, description, manufacturer, releaseDate, stars);
+		return new ProductEntity(id, name, color, category, description, manufacturer, releaseDate, stars);
 	}
 }

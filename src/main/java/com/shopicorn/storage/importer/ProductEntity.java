@@ -18,6 +18,8 @@ public class ProductEntity {
 	@Id
 	long id;
 
+	String name;
+
 	String color;
 
 	String category;
