@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -22,16 +21,14 @@ public class ProductImportController {
 	 * Import the CSV file at ./file/import.scv and return the count of imported
 	 * entities.
 	 * 
-	 * @param clear set to <code>true</code> to clear the Database before importing.
 	 * @return {@link ResponseEntity} holding the count of imported entities
 	 * @throws IOException Thrown when import fails
 	 */
 	@GetMapping
-	ResponseEntity<Integer> importDB(@RequestParam(required = false) boolean clear) throws IOException {
-		if (clear) {
-			repo.deleteAll();
-		}
-
+	ResponseEntity<Integer> importDB() throws IOException {
+		// Reset Table
+		repo.deleteAll();
+		
 		// Import CSV File
 		var file = new File("file/import.csv");
 		var reader = new ProductCsvReader(file);
