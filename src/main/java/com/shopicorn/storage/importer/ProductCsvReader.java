@@ -19,7 +19,8 @@ class ProductCsvReader {
 	}
 
 	public Collection<ProductEntity> readCsv() throws IOException {
-		try (CSVParser csvParser = new CSVParser(Files.newBufferedReader(file.toPath()), CSVFormat.DEFAULT);) {
+		try (CSVParser csvParser = new CSVParser(Files.newBufferedReader(file.toPath()),
+				CSVFormat.DEFAULT.withHeader());) {
 			Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 			return StreamSupport.stream(csvRecords.spliterator(), false).map(this::toProductEntity).toList();
 		} catch (IOException e) {
