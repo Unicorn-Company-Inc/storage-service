@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/storage/import")
-public class ImportController {
+public class ProductImportController {
 
 	@Autowired
 	ProductRepository repo;
