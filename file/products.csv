@@ -1,4 +1,11 @@
 id,name,color,category,description,manufacturer,releaseDate,stars
-0,Hufeisen 3000,0x0000ff,accessories,ein richtig gutes Hufeisen,Unishoes,2019-01-01,5
-1,Premium Heu,0xff0000,food,Heu vom Lande,Cornfoods,2019-01-01,4
-2,Einhorn Mütze,0x33ff00,accessories,Baumwoll Mütze für das Einhorn,I&N,2021-04-09,3
+0,Hufeisen 3000,#0000ff,accessories,Ein richtig gutes Hufeisen,Unishoes,2019-01-01,5
+1,Premium Heu,#ff0000,food,Heu vom Lande,Cornfoods,2019-01-01,4
+2,Einhorn Mütze,#33ff00,accessories,Baumwoll Mütze für das Einhorn,I&N,2021-04-09,3
+3,Einhorn Treats,#ff0000,food,Leckalies für das brave Einhorn,Hornis,2021-03-03,4
+4,Leder Sattel,#42fa67,accessories,Hochwertiger Ledersattel mit Rostfreien Nieten,ProficornGmbh,2020-12-05,5
+5,Billig Heu,#ffff00,food,Heu Reste vom Kuhstall,BilligHorn,2018-01-12,1
+6,Einhornwasser,#ffffff,food,Magisches Einhornwasser mit Erdbeergeschmack,Cornidrinks&CoKg,2021-06-10,4
+7,Kopfbedeckung,#891564,accessories,Ein richtig gutes Kopfbedeckung,I&N,2021-09-11,3
+8,Seitentasche,#54df6a,accessoriesk,Handgefertigte Seitentasche für dein Einhorn,Guccicorn,2020-11-28,4
+9,Peitsche,#110035,others,Sanfte Peitsche für Böse Einhörner,MagicalWhips,2019-09-20,2
