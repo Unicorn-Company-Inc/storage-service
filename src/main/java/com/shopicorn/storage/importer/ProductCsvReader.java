@@ -37,6 +37,15 @@ class ProductCsvReader {
 		String manufacturer = record.get("manufacturer");
 		LocalDate releaseDate = LocalDate.parse(record.get("releaseDate"));
 		int stars = Integer.parseInt(record.get("stars"));
-		return new ProductEntity(id, name, color, category, description, manufacturer, releaseDate, stars);
+		return ProductEntity.builder()
+				.id(id)
+				.name(name)
+				.color(color)
+				.category(category)
+				.description(description)
+				.manufacturer(manufacturer)
+				.releaseDate(releaseDate)
+				.stars(stars)
+				.build();
 	}
 }
