@@ -19,10 +19,6 @@ public class ProductImportController {
 
 	/**
 	 * Import the CSV file at ./file/products.csv
-	 * 
-	 * @return {@link ResponseEntity} holding the imported {@link ProductEntity}
-	 *         list.
-	 * @throws IOException Thrown when import fails
 	 */
 	@GetMapping
 	Collection<ProductEntity> importDB() throws IOException {
